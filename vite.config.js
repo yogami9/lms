@@ -9,4 +9,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    host: '0.0.0.0', // listen on all network interfaces
+    // eslint-disable-next-line no-undef
+    port: Number(process.env.PORT) || 10000, // use the port specified by Render
+  }
 });
